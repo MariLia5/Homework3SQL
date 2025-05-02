@@ -109,23 +109,23 @@ FOREIGN KEY (lectureId)  REFERENCES lectures (id)
 --DROP DATABASE Academy;
 
 INSERT INTO curators ([name],surname) VALUES
-('Северус', 'Снейп')
-('Альбус', 'Дамболдор')
+('Severus', 'Snape')
+('Albus', 'Dumbledore')
 SELECT * FROM curators;
 
 INSERT INTO faculties (financing, [name]) VALUES
-(1000, 'Зельеварение'),
-(2000, 'Темная магия'),
-(3000, 'Защита от темных сил')
+(1000, 'Potion making'),
+(2000, 'Dark Magic'),
+(3000, 'Protection from dark forces')
 SELECT * FROM faculties;
 
 UPDATE curators
-SET [name] = 'Альбус-Северус'
+SET [name] = 'Albus-Severus'
 WHERE id = 1;
 SELECT * FROM curators;
 
 UPDATE faculties
-SET [name] = 'Предвиденье'
+SET [name] = 'Foresight'
 WHERE financing > 1000;
 SELECT * FROM faculties;
 
