@@ -15,7 +15,7 @@ GO
 
 CREATE TABLE faculties (
 id INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
-financing MONEY NOT NULL DEFAULT (0),
+financing MONEY NOT NULL DEFAULT 0,
 [name] NVARCHAR(100) NOT NULL UNIQUE,
     
 CONSTRAINT CHK_faculties_financing CHECK (financing >= 0),
@@ -126,7 +126,7 @@ SELECT * FROM curators;
 
 UPDATE faculties
 SET [name] = 'Foresight'
-WHERE financing > 1000;
+WHERE financing = 1000;
 SELECT * FROM faculties;
 
 DELETE curators 
